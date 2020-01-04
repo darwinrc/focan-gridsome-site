@@ -100,6 +100,7 @@ export default {
     grid-template-columns: repeat(3, 21rem);
     grid-template-rows: repeat(3, 20rem);
     grid-gap: 1rem;
+    justify-content: center;
 
     &__card {
       border: .5rem solid gray;
