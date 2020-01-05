@@ -7,60 +7,10 @@
           <g-image class="logo__img" alt="FOCAN Logo" src="~/assets/logo-home.png" />
         </div>
         <div class="stories">
-          <div class="stories__card">
-            <div class="stories__card-header">
-              Caspar
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/dog1.jpg" />
-          </div>
-          <div class="stories__card">
-            <div class="stories__card-header">
-              Mayo
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/cat1.jpg"/>
-          </div>
-           <div class="stories__card">
-            <div class="stories__card-header">
-              Petulia
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/dog2.jpg"/>
-          </div>
-          <div class="stories__card">
-            <div class="stories__card-header">
-              Truco
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/cat2.jpg"/>
-          </div>
-          <div class="stories__card">
-            <div class="stories__card-header">
-              Luna
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/dog3.jpg"/>
-          </div>
-          <div class="stories__card">
-            <div class="stories__card-header">
-              Samba
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/cat3.jpg"/>
-          </div>
-          <div class="stories__card">
-            <div class="stories__card-header">
-              Romeo
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/dog4.jpg"/>
-          </div>
-          <div class="stories__card">
-            <div class="stories__card-header">
-              Dora
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/cat4.jpg"/>
-          </div>
-          <div class="stories__card">
-            <div class="stories__card-header">
-              Jose
-            </div>
-            <g-image class="stories__img" alt="Example image" src="~/assets/catdog.jpg"/>
-          </div>
+          <StoryCard v-for="story in stories" 
+              :name="story.name" 
+              :image="story.image" 
+              :key="story.name"/>
         </div>
         <g-link class="nav__link nav__link--danger urgent" to="/urgent/">URGENTES</g-link>
       </section>
@@ -83,7 +33,9 @@
     </main>
     
 
-    
+    <modal name="story-modal">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores molestiae debitis reprehenderit, minima enim possimus repudiandae facere dolor saepe in vel nulla nihil eos odio quam mollitia adipisci dicta voluptatum qui blanditiis! Nemo, repellendus. Numquam ducimus in iste vitae vel accusantium tenetur culpa aut quaerat, quae nobis provident debitis?
+    </modal>
 
   </Layout>
 </template>
@@ -97,9 +49,64 @@ query {
 </static-query>
 
 <script>
+import StoryCard from '~/components/StoryCard.vue';
+
 export default {
   metaInfo: {
-    title: 'FOCAN - FOndo para el Cuidado Animal'
+    title: 'FOCAN - Fondo para el Cuidado Animal'
+  },
+  data () {
+    return {
+      stories: [
+        {
+          name: 'Caspar',
+          image: 'dog1.jpg'
+        },
+        {
+          name: 'Mayo',
+          image: 'cat1.jpg'
+        },
+        {
+          name: 'Petulia',
+          image: 'dog2.jpg'
+        },
+        {
+          name: 'Truco',
+          image: 'cat2.jpg'
+        },{
+          name: 'Luna',
+          image: 'dog3.jpg'
+        },
+        {
+          name: 'Samba',
+          image: 'cat3.jpg'
+        },
+        {
+          name: 'Romeo',
+          image: 'dog4.jpg'
+        },
+        {
+          name: 'Dora',
+          image: 'cat4.jpg'
+        },
+        {
+          name: 'Jose',
+          image: 'catdog.jpg'
+        },
+      ]
+    }
+  },
+  components: {
+    StoryCard
+  },
+
+  methods:{
+    show () {
+      this.$modal.show('hello-world');
+    },
+    hide () {
+      this.$modal.hide('hello-world');
+    }
   }
 }
 </script>
@@ -135,37 +142,6 @@ export default {
     justify-content: center;
     align-items: center;
     margin: 5rem 0 1rem;
-
-    &__card {
-      cursor: pointer;
-      position: relative;
-
-      transition: all .6s ease-in-out;
-
-      &:hover {
-        transform: scale(1.7);
-         z-index: 10;
-      }
-    }
-
-    &__card-header {
-      background: #e0f7fa78;
-      font-size: 3rem;
-      position: absolute;
-      margin-top: -3rem;
-      padding: 0 1rem;  
-    }
-
-    &__img {
-      width: 20rem;
-      opacity: .5;
-
-      transition: all .6s ease-in-out;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
   }
 
   .nav {

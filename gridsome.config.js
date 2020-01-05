@@ -6,5 +6,9 @@
 
 module.exports = {
   siteName: 'FOCAN',
-  plugins: []
+  plugins: [
+    {
+      use: 'gridsome-plugin-modal'
+    }
+  ]
 }
