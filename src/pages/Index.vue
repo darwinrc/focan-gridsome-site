@@ -15,7 +15,7 @@
           </div>
           <div class="stories__card">
             <div class="stories__card-header">
-              Samba
+              Mayo
             </div>
             <g-image class="stories__img" alt="Example image" src="~/assets/cat1.jpg"/>
           </div>
@@ -39,7 +39,7 @@
           </div>
           <div class="stories__card">
             <div class="stories__card-header">
-              Coco
+              Samba
             </div>
             <g-image class="stories__img" alt="Example image" src="~/assets/cat3.jpg"/>
           </div>
@@ -57,7 +57,7 @@
           </div>
           <div class="stories__card">
             <div class="stories__card-header">
-              Mayo
+              Jose
             </div>
             <g-image class="stories__img" alt="Example image" src="~/assets/catdog.jpg"/>
           </div>
