@@ -27,7 +27,7 @@
           </div>
           <div class="stories__card">
             <div class="stories__card-header">
-              Lucas
+              Truco
             </div>
             <g-image class="stories__img" alt="Example image" src="~/assets/cat2.jpg"/>
           </div>
@@ -57,7 +57,7 @@
           </div>
           <div class="stories__card">
             <div class="stories__card-header">
-              Tom & Jerry
+              Mayo
             </div>
             <g-image class="stories__img" alt="Example image" src="~/assets/catdog.jpg"/>
           </div>
