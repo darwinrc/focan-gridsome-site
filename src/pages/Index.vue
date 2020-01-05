@@ -110,6 +110,12 @@ export default {
       cursor: pointer;
       position: relative;
 
+      transition: all .6s ease-in-out;
+
+      &:hover {
+        transform: scale(1.7);
+      }
+
       &:nth-child(1) {
         grid-row-start: 1;
         grid-column-start: 2;
