@@ -31,6 +31,36 @@
             </div>
             <g-image class="stories__img" alt="Example image" src="~/assets/cat2.jpg"/>
           </div>
+          <div class="stories__card">
+            <div class="stories__card-header">
+              Luna
+            </div>
+            <g-image class="stories__img" alt="Example image" src="~/assets/dog3.jpg"/>
+          </div>
+          <div class="stories__card">
+            <div class="stories__card-header">
+              Coco
+            </div>
+            <g-image class="stories__img" alt="Example image" src="~/assets/cat3.jpg"/>
+          </div>
+          <div class="stories__card">
+            <div class="stories__card-header">
+              Romeo
+            </div>
+            <g-image class="stories__img" alt="Example image" src="~/assets/dog4.jpg"/>
+          </div>
+          <div class="stories__card">
+            <div class="stories__card-header">
+              Dora
+            </div>
+            <g-image class="stories__img" alt="Example image" src="~/assets/cat4.jpg"/>
+          </div>
+          <div class="stories__card">
+            <div class="stories__card-header">
+              Tom & Jerry
+            </div>
+            <g-image class="stories__img" alt="Example image" src="~/assets/catdog.jpg"/>
+          </div>
         </div>
         <g-link class="nav__link nav__link--danger urgent" to="/urgent/">URGENTES</g-link>
       </section>
@@ -114,39 +144,27 @@ export default {
 
       &:hover {
         transform: scale(1.7);
-      }
-
-      &:nth-child(1) {
-        grid-row-start: 1;
-        grid-column-start: 2;
-      }
-      
-      &:nth-child(2) {
-        grid-row-start: 2;
-        grid-column-start: 1;
-      }
-
-      &:nth-child(3) {
-        grid-row-start: 2;
-        grid-column-start: 3;
-      }
-
-      &:nth-child(4) {
-        grid-row-start: 3;
-        grid-column-start: 2;
+         z-index: 10;
       }
     }
 
     &__card-header {
       background: #e0f7fa78;
       font-size: 3rem;
-      width: 50%;
       position: absolute;
       margin-top: -3rem;
+      padding: 0 1rem;  
     }
 
     &__img {
       width: 20rem;
+      opacity: .5;
+
+      transition: all .6s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
