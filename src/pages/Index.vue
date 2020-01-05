@@ -32,6 +32,7 @@
             <g-image class="stories__img" alt="Example image" src="~/assets/cat2.jpg"/>
           </div>
         </div>
+        <g-link class="nav__link nav__link--danger urgent" to="/urgent/">URGENTES</g-link>
       </section>
       <section>
 
@@ -42,11 +43,10 @@
           </strong>
           -->
           <nav class="nav">
-            <g-link class="nav__link nav__link--danger" to="/urgent/">Urgentes</g-link>
-            <g-link class="nav__link" to="/news/">Noticias</g-link>
-            <g-link class="nav__link" to="/shop/">Tienda Solidaria</g-link>
-            <g-link class="nav__link" to="/stories/">Historia</g-link>
-            <g-link class="nav__link" to="/about/">Acerca de FOCAN</g-link>
+            <g-link class="nav__link" to="/news/">NOTICIAS</g-link>
+            <g-link class="nav__link" to="/shop/">TIENDA</g-link>
+            <g-link class="nav__link" to="/stories/">HISTORIA</g-link>
+            <g-link class="nav__link nav__link--danger" to="/urgent/">DONAR</g-link>
           </nav>
         </header>
       </section>
@@ -81,14 +81,16 @@ export default {
   }
 
   section {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     height: 100vh;
-    border-right: 1px solid gray;
+    border-right: 1px solid lightgray;
   }
 
   .logo {
-    width: 50rem;
-    margin: 5rem auto;
+    width: 20rem;
+    margin: 1rem;
 
     &__img {
       width: 100%;
@@ -101,9 +103,12 @@ export default {
     grid-template-rows: repeat(3, 20rem);
     grid-gap: 1rem;
     justify-content: center;
+    align-items: center;
+    margin: 5rem 0 1rem;
 
     &__card {
-      border: .5rem solid gray;
+      cursor: pointer;
+      position: relative;
 
       &:nth-child(1) {
         grid-row-start: 1;
@@ -127,12 +132,11 @@ export default {
     }
 
     &__card-header {
-      background-color: #E0F7FA;
-      height: 5rem;
+      background: #e0f7fa78;
       font-size: 3rem;
       width: 50%;
-      border: 1px solid gray;
-      margin-bottom: .5rem;
+      position: absolute;
+      margin-top: -3rem;
     }
 
     &__img {
@@ -148,16 +152,22 @@ export default {
     height: 100vh;
 
     &__link {
-      font-size: 5rem;
-      line-height: 15rem;
+      font-size: 13rem;
 
       &--danger {
-        color: red;
-
-        &:hover, &:active {
-          color: pink;
-        }
+        color: white;
+        background: red;
+        line-height: 10rem;
+        border-radius: 10rem;
+        padding: 2rem;
+        bottom: 1rem;
+        position: absolute;
       }
     }
+  }
+
+  .urgent {
+    align-self: center;
+    font-size: 9rem;
   }
 </style>
