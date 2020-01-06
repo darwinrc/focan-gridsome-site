@@ -78,12 +78,16 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   h1 {
     font-size: 7rem;
     font-weight: 600;
     text-align: center;
     color: #00B8D4;
+  }
+
+  p {
+    font-size: 2rem;
   }
 
   .Shop{

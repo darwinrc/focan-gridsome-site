@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 p {
   font-size: 2rem;
   padding: 0 1.5rem;
