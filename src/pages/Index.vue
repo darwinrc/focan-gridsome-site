@@ -169,6 +169,7 @@ export default {
 
     &__link {
       font-size: 13rem;
+      font-weight: 600;
 
       &--danger {
         align-self: center;
