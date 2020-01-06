@@ -96,6 +96,18 @@ export default {
           name: 'Jose',
           image: 'catdog.jpg'
         },
+        //  {
+        //  name: 'Romeo',
+        //   image: 'dog4.jpg'
+        // },
+        // {
+        //   name: 'Dora',
+        //   image: 'cat4.jpg'
+        // },
+        // {
+        //   name: 'Jose',
+        //   image: 'catdog.jpg'
+        // },
       ]
     }
   },
@@ -148,17 +160,18 @@ export default {
       width: 200px;
       border-radius: 63%;
       height: 200px;
+      transform: rotate(90deg);
     }
   }
 
   .stories {
     display: grid;
     grid-template-columns: repeat(3, 21rem);
-    grid-template-rows: repeat(3, 20rem);
+    grid-template-rows: repeat(3, 25rem);
     grid-gap: 1rem;
     justify-content: center;
     align-items: center;
-    margin: 5rem 0 1rem;
+    margin: 1rem 0 1rem;
   }
 
   .nav {
