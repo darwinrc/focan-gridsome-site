@@ -12,7 +12,7 @@
               :image="story.image" 
               :key="story.name"/>
         </div>
-        <g-link class="nav__link nav__link--danger urgent" to="/urgent/">URGENTES</g-link>
+        <!-- <g-link class="nav__link nav__link--danger urgent" to="/urgent/">URGENTES</g-link> -->
       </section>
       <section>
         <g-image class="cat-background" alt="FOCAN Logo" src="~/assets/cat.png" />
@@ -154,7 +154,7 @@ export default {
   .stories {
     display: grid;
     grid-template-columns: repeat(3, 21rem);
-    grid-template-rows: repeat(3, 25rem);
+    grid-template-rows: repeat(3, 30rem);
     grid-gap: 1rem;
     justify-content: center;
     align-items: center;
@@ -162,9 +162,10 @@ export default {
   }
 
   .nav {
+    margin: 7rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 
     &__link {
       font-size: 13rem;
@@ -176,14 +177,17 @@ export default {
         line-height: 10rem;
         border-radius: 10rem;
         padding: 2rem;
-        bottom: 1rem;
         position: absolute;
+        top: -43px;
+        right: 3px;
+        height: 100px;
+        font-size: 3rem;
+
       }
     }
   }
 
   .urgent {
-    // align-self: center;
     font-size: 2rem;
   }
 </style>

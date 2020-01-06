@@ -47,12 +47,13 @@ export default {
     &__img {
         width: 20rem;
         opacity: .6;
-        transform: rotate(90deg);
+        transform: rotate(-70deg);
 
         transition: all .6s ease-in-out;
 
         &:hover {
             opacity: 1;
+            transform: rotate(0);
         }
     }
 }
