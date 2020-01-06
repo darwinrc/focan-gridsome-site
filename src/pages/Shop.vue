@@ -3,39 +3,66 @@
     <h1>Tienda Solidaria</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
  <section class="Shop__gallery">
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop1.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop2.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop3.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop4.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop5.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop6.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop7.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop8.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop9.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop10.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop11.jpg"/>
-  <g-image class="Shop__img"  
-            src="~/assets/shop/shop12.jpg"/>
+    <ShopCard class="Shop__img"
+              v-for="article in articles" 
+              :name="article.name" 
+              :image="article.image" 
+              :key="article.name"/>
  </section>
   </Layout>
 </template>
 
 <script>
+import ShopCard from '~/components/ShopCard.vue';
+
 export default {
   metaInfo: {
     title: 'Tienda Solidaria'
-  }
+  },
+  data () {
+    return {
+      articles: [
+        {
+          name: 'Caspar',
+          image: 'shop1.jpg'
+        },
+        {
+          name: 'Mayo',
+          image: 'shop2.jpg'
+        },
+        {
+          name: 'Petulia',
+          image: 'shop3.jpg'
+        },
+        {
+          name: 'Truco',
+          image: 'shop4.jpg'
+        },{
+          name: 'Luna',
+          image: 'shop5.jpg'
+        },
+        {
+          name: 'Samba',
+          image: 'shop6.jpg'
+        },
+        {
+          name: 'Romeo',
+          image: 'shop7.jpg'
+        },
+        {
+          name: 'Dora',
+          image: 'shop8.jpg'
+        },
+        {
+          name: 'Jose',
+          image: 'shop9.jpg'
+        },
+      ]
+    }
+  },
+   components: {
+    ShopCard
+  },
 }
 </script>
 
