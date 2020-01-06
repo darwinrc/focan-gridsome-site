@@ -219,7 +219,7 @@ export default {
       align-items: center;
       margin: 1rem auto;
       transition: all .6s ease-in-out;
-      margin-right: -22rem;
+      margin-right: -21rem;
 
       &:hover {
         margin-right: 0;
@@ -231,6 +231,10 @@ export default {
       font-weight: 600;
       border-right: 1px solid white;
       padding: 0 1rem;
+      width: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &__text {
@@ -240,8 +244,6 @@ export default {
       color: gray;
       width: 100%;
       text-align: center;
-      padding: 0 1rem;
-
     }
   }
 
