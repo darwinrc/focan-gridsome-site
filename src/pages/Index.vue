@@ -3,9 +3,9 @@
 
     <main>
       <section>
-        <div class="logo">
+        <!-- <div class="logo">
           <g-image class="logo__img" alt="FOCAN Logo" src="~/assets/logo-home.png" />
-        </div>
+        </div> -->
         <div class="stories">
           <StoryCard v-for="story in stories" 
               :name="story.name" 
@@ -15,7 +15,10 @@
         <g-link class="nav__link nav__link--danger urgent" to="/urgent/">URGENTES</g-link>
       </section>
       <section>
-
+        <g-image class="cat-background" alt="FOCAN Logo" src="~/assets/cat.png" />
+         <div class="logo">
+          <g-image class="logo__img" alt="FOCAN Logo" src="~/assets/logo-home.png" />
+        </div>
         <header class="header">
         <!--
           <strong>
@@ -123,14 +126,28 @@ export default {
     width: 50%;
     height: 100vh;
     border-right: 1px solid lightgray;
+
+    &:last-child {
+      position: relative;
+    }
+  }
+
+  .cat-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: .7;
   }
 
   .logo {
     width: 20rem;
-    margin: 1rem;
+    margin: 1rem auto;
 
     &__img {
-      width: 100%;
+      width: 200px;
+      border-radius: 63%;
+      height: 200px;
     }
   }
 
@@ -147,14 +164,14 @@ export default {
   .nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     height: 100vh;
 
     &__link {
       font-size: 13rem;
 
       &--danger {
+        align-self: center;
         color: white;
         background: red;
         line-height: 10rem;
@@ -167,7 +184,7 @@ export default {
   }
 
   .urgent {
-    align-self: center;
-    font-size: 9rem;
+    // align-self: center;
+    font-size: 2rem;
   }
 </style>

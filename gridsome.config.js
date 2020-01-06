@@ -7,8 +7,14 @@
 module.exports = {
   siteName: 'FOCAN',
   plugins: [
+    // {
+    //   use: 'gridsome-source-google-sheets',
+    //   options: {
+    //     sheetId: 'GOOGLE_SHEET_ID', 
+    //     apiKey: 'GOOGLE_API_KEY',
+    // },
     {
       use: 'gridsome-plugin-modal'
-    }
+    },
   ]
 }

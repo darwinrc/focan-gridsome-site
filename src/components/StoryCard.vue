@@ -45,7 +45,7 @@ export default {
 
     &__img {
         width: 20rem;
-        opacity: .5;
+        opacity: .6;
 
         transition: all .6s ease-in-out;
 
