@@ -219,7 +219,7 @@ export default {
       align-items: center;
       margin: 1rem auto;
       transition: all .6s ease-in-out;
-      margin-right: -20rem;
+      margin-right: -22rem;
 
       &:hover {
         margin-right: 0;
@@ -240,6 +240,7 @@ export default {
       color: gray;
       width: 100%;
       text-align: center;
+      padding: 0 1rem;
 
     }
   }
