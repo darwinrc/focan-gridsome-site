@@ -26,9 +26,21 @@
             <g-link class="nav__link" to="/news/">NOTICIAS</g-link>
             <g-link class="nav__link" to="/shop/">TIENDA</g-link>
             <g-link class="nav__link" to="/stories/">HISTORIA</g-link>
-            <g-link class="nav__link nav__link--danger" to="/urgent/">DONAR</g-link>
+            <!-- <g-link class="nav__link nav__link--danger" to="/urgent/">DONAR</g-link> -->
           </nav>
         </header>
+        <nav class="navTabs">
+          <div class="navTabs__container">
+          <div class="navTabs__tab" id="donate">
+            <span class="navTabs__icon">$</span>
+            <span class="navTabs__text">DONACIONES</span>
+          </div>
+          <div class="navTabs__tab" id="emergency">
+            <span class="navTabs__icon">+</span>
+            <span class="navTabs__text">URGENCIAS</span>
+          </div>
+          </div>
+        </nav>
       </section>
     </main>
     
@@ -185,7 +197,58 @@ export default {
     }
   }
 
+  .navTabs {
+    position: absolute;
+    top:0;
+    right: 0;
+
+    &__container {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    &__tab {
+      cursor: pointer;
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+      border-radius: 5rem 0 0 5rem;
+      color: white;
+      background: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem auto;
+      transition: all .6s ease-in-out;
+      margin-right: -20rem;
+
+      &:hover {
+        margin-right: 0;
+      }
+    }
+
+    &__icon {
+      font-size: 3rem;
+      font-weight: 600;
+      border-right: 1px solid white;
+      padding: 0 1rem;
+    }
+
+    &__text {
+      font-size: 3rem;
+      font-weight: 600;
+      background: white;
+      color: gray;
+      width: 100%;
+      text-align: center;
+
+    }
+  }
+
   .urgent {
     font-size: 2rem;
   }
+
+  // #donate, #emergency :hover {
+  //    margin-right: 0;
+  // }
 </style>
