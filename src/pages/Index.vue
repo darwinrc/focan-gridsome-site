@@ -96,18 +96,6 @@ export default {
           name: 'Jose',
           image: 'catdog.jpg'
         },
-        //  {
-        //  name: 'Romeo',
-        //   image: 'dog4.jpg'
-        // },
-        // {
-        //   name: 'Dora',
-        //   image: 'cat4.jpg'
-        // },
-        // {
-        //   name: 'Jose',
-        //   image: 'catdog.jpg'
-        // },
       ]
     }
   },
@@ -160,7 +148,6 @@ export default {
       width: 200px;
       border-radius: 63%;
       height: 200px;
-      transform: rotate(90deg);
     }
   }
 
