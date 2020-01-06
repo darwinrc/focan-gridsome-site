@@ -165,7 +165,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    height: 100vh;
 
     &__link {
       font-size: 13rem;
