@@ -1,13 +1,12 @@
 <template>
   <Layout>
-    <h1>Tienda Solidaria</h1>
+    <h1>TIENDA SOLIDARIA</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
  <section class="Shop__gallery">
-    <ShopCard class="Shop__img"
-              v-for="article in articles" 
-              :name="article.name" 
-              :image="article.image" 
-              :key="article.name"/>
+    <ShopCard v-for="item in items" 
+              :description="item.description" 
+              :image="item.image" 
+              :key="item.image"/>
  </section>
   </Layout>
 </template>
@@ -21,41 +20,54 @@ export default {
   },
   data () {
     return {
-      articles: [
+      items: [
         {
-          name: 'Caspar',
-          image: 'shop1.jpg'
+          image: 'shop1.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
         {
-          name: 'Mayo',
-          image: 'shop2.jpg'
+          image: 'shop2.jpg',
+          description: 'Donec sed odio operae, eu vulputate felis rhoncus.'
         },
         {
-          name: 'Petulia',
-          image: 'shop3.jpg'
+          image: 'shop3.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
         {
-          name: 'Truco',
-          image: 'shop4.jpg'
-        },{
-          name: 'Luna',
-          image: 'shop5.jpg'
+          image: 'shop4.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
         {
-          name: 'Samba',
-          image: 'shop6.jpg'
+          image: 'shop5.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
         {
-          name: 'Romeo',
-          image: 'shop7.jpg'
+          image: 'shop6.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
         {
-          name: 'Dora',
-          image: 'shop8.jpg'
+          image: 'shop7.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
         {
-          name: 'Jose',
-          image: 'shop9.jpg'
+          image: 'shop8.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        },
+        {
+          image: 'shop9.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        },
+        {
+          image: 'shop10.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        },
+        {
+          image: 'shop11.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        },
+        {
+          image: 'shop12.jpg',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
       ]
     }
@@ -67,27 +79,17 @@ export default {
 </script>
 
 <style lang="scss">
-  Layout {
-    display: flex;
-    flex-direction: column;
+  h1 {
+    font-size: 7rem;
+    font-weight: 600;
+    text-align: center;
+    color: #00B8D4;
   }
 
   .Shop{
     &__gallery {
-       display: grid;
-      grid-template-columns: repeat(3, 21rem);
-      grid-template-rows: repeat(4, 30rem);
-      grid-gap: 1rem;
-      justify-content: center;
-      align-items: center;
-      margin: 1rem 0 1rem;
-      width: 100vw;
-      height: 100vh; 
-    }
-
-    &__img {
-      width: 20rem;
-      height: 20rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>

@@ -3,9 +3,6 @@
 
     <main>
       <section>
-        <!-- <div class="logo">
-          <g-image class="logo__img" alt="FOCAN Logo" src="~/assets/logo-home.png" />
-        </div> -->
         <div class="stories">
           <StoryCard v-for="story in stories" 
               :name="story.name" 

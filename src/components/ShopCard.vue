@@ -1,66 +1,70 @@
 <template>
-<div class="StoryCard" @click="showStory">
-    <g-image class="StoryCard__img" :alt="name" 
+<figure class="ShopCard">
+  <div class="ShopCard__header">
+    <g-image class="ShopCard__img" :alt="description" 
             :src="require('!!assets-loader!~/assets/shop/' + image)"/>
-    <div class="StoryCard__footer">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    </div>
-</div>
+  </div>
+   <div class="ShopCard__overlay">
+      <figcaption class="ShopCard__footer">
+          <p>{{description}}</p> 
+      </figcaption>
+  </div>
+</figure>
 </template>
 
 <script>
 export default {
   props: [
-    'name',
-    'image'
+    'image',
+    'description',
   ],
-  methods:{
-    showStory () {
-      this.$modal.show('story-modal');
-    },
-    hideStory () {
-      this.$modal.hide('story-modal');
-    }
-  }
 }
 </script>
 
 <style lang="scss">
-.StoryCard {
-    cursor: pointer;
+p {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+}
+.ShopCard {
+  position: relative;
+  margin: 1rem;
+
+  &__header {
     position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+  }
 
-    // transition: all .6s ease-in-out;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+  }
 
-    &:hover {
-        // transform: scale(1.7);
-        // z-index: 10;
+  &__overlay {
+    background: black;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:hover { 
+      opacity: .7;
+    } 
+
+    figcaption {
+      position:absolute;
+      top: auto;
+      bottom:0;
+      background:hsla(0,0%,100%,.85);
+      color:#3c4a50;
+      width: 100%;
     }
-
-    &__footer {
-      
-    }
-
-    // &__header {
-    //     background: #e0f7fa78;
-    //     font-size: 3rem;
-    //     position: absolute;
-    //     margin-top: -3rem;
-    //     padding: 0 1rem;
-    //     z-index: 10;
-    // }
-
-    &__img {
-        width: 20rem;
-        // opacity: .6;
-        // transform: rotate(-70deg);
-
-        // transition: all .6s ease-in-out;
-
-        &:hover {
-            // opacity: 1;
-            // transform: rotate(0);
-        }
-    }
+  }
 }
 </style>

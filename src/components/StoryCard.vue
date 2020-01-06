@@ -41,7 +41,7 @@ export default {
         position: absolute;
         margin-top: -3rem;
         padding: 0 1rem;
-        z-index: 10;
+        z-index: 9;
     }
 
     &__img {
