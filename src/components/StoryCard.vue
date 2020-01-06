@@ -41,11 +41,13 @@ export default {
         position: absolute;
         margin-top: -3rem;
         padding: 0 1rem;
+        z-index: 10;
     }
 
     &__img {
         width: 20rem;
         opacity: .6;
+        transform: rotate(90deg);
 
         transition: all .6s ease-in-out;
 
