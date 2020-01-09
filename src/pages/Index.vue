@@ -9,7 +9,6 @@
               :image="story.image" 
               :key="story.name"/>
         </div>
-        <!-- <g-link class="nav__link nav__link--danger urgent" to="/urgent/">URGENTES</g-link> -->
       </section>
       <section>
         <g-image class="cat-background" alt="FOCAN Logo" src="~/assets/cat.png" />
@@ -26,16 +25,17 @@
             <g-link class="nav__link" to="/news/">NOTICIAS</g-link>
             <g-link class="nav__link" to="/shop/">TIENDA</g-link>
             <g-link class="nav__link" to="/stories/">HISTORIA</g-link>
-            <!-- <g-link class="nav__link nav__link--danger" to="/urgent/">DONAR</g-link> -->
           </nav>
         </header>
         <nav class="navTabs">
           <div class="navTabs__container">
-            <div class="navTabs__tab" id="donate">
+            <div class="navTabs__tab">
               <span class="navTabs__icon">$</span>
               <span class="navTabs__text">DONACIONES</span>
             </div>
-            <div class="navTabs__tab" id="emergency">
+          </div>
+          <div class="navTabs__container">
+            <div class="navTabs__tab">
               <span class="navTabs__icon">+</span>
               <span class="navTabs__text">URGENCIAS</span>
             </div>
@@ -192,23 +192,24 @@ export default {
         right: 3px;
         height: 100px;
         font-size: 3rem;
-
       }
     }
   }
 
   .navTabs {
-    position: absolute;
-    top:0;
-    right: 0;
-
     &__container {
-      // position: relative;
       overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      
+      &:last-child {
+        top: 5rem;
+      }
     }
     
     &__tab {
-      cursor: pointer;
+      cursor: pointer;  
       border-top: 1px solid red;
       border-bottom: 1px solid red;
       border-radius: 5rem 0 0 5rem;
@@ -218,12 +219,12 @@ export default {
       justify-content: center;
       align-items: center;
       margin: 1rem auto;
-      // transition: all .6s ease-in-out;
-      // margin-right: -21rem;
+      transition: all .6s ease-in-out;
+      margin-right: -21rem;
 
-      // &:hover {
-      //   margin-right: 0;
-      // }
+      &:hover {
+        margin-right: 0;
+      }
     }
 
     &__icon {
@@ -242,34 +243,8 @@ export default {
       font-weight: 600;
       background: white;
       color: gray;
-      width: 100%;
+      width: 21rem;
       text-align: center;
     }
   }
-
-  .urgent {
-    font-size: 2rem;
-  }
-
-  #donate {
-    margin-right: -21rem;
-    transition: all .6s ease-in-out;
-    
-    &:hover {
-        margin-right: 0;
-    }
-  }
-
-  #emergency {
-    margin-right: -21rem;
-    transition: all .6s ease-in-out;
-    
-    &:hover {
-        margin-right: 0;
-    }
-  }
-
-  // #donate, #emergency :hover {
-  //    margin-right: 0;
-  // }
 </style>
