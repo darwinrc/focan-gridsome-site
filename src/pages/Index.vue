@@ -31,14 +31,14 @@
         </header>
         <nav class="navTabs">
           <div class="navTabs__container">
-          <div class="navTabs__tab" id="donate">
-            <span class="navTabs__icon">$</span>
-            <span class="navTabs__text">DONACIONES</span>
-          </div>
-          <div class="navTabs__tab" id="emergency">
-            <span class="navTabs__icon">+</span>
-            <span class="navTabs__text">URGENCIAS</span>
-          </div>
+            <div class="navTabs__tab" id="donate">
+              <span class="navTabs__icon">$</span>
+              <span class="navTabs__text">DONACIONES</span>
+            </div>
+            <div class="navTabs__tab" id="emergency">
+              <span class="navTabs__icon">+</span>
+              <span class="navTabs__text">URGENCIAS</span>
+            </div>
           </div>
         </nav>
       </section>
@@ -203,7 +203,7 @@ export default {
     right: 0;
 
     &__container {
-      position: relative;
+      // position: relative;
       overflow: hidden;
     }
     
@@ -218,12 +218,12 @@ export default {
       justify-content: center;
       align-items: center;
       margin: 1rem auto;
-      transition: all .6s ease-in-out;
-      margin-right: -21rem;
+      // transition: all .6s ease-in-out;
+      // margin-right: -21rem;
 
-      &:hover {
-        margin-right: 0;
-      }
+      // &:hover {
+      //   margin-right: 0;
+      // }
     }
 
     &__icon {
@@ -249,6 +249,24 @@ export default {
 
   .urgent {
     font-size: 2rem;
+  }
+
+  #donate {
+    margin-right: -21rem;
+    transition: all .6s ease-in-out;
+    
+    &:hover {
+        margin-right: 0;
+    }
+  }
+
+  #emergency {
+    margin-right: -21rem;
+    transition: all .6s ease-in-out;
+    
+    &:hover {
+        margin-right: 0;
+    }
   }
 
   // #donate, #emergency :hover {

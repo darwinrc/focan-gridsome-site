@@ -94,6 +94,7 @@ export default {
     &__gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
     }
   }
 </style>
