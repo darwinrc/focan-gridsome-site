@@ -30,9 +30,18 @@ export default {
 
     transition: all .6s ease-in-out;
 
+     @media (max-width: $breakpoint-mobile-portrait) {
+      margin-top: 2rem;
+    }
+
     &:hover {
         transform: scale(1.7);
         z-index: 10;
+
+        @media (max-width: $breakpoint-mobile-portrait) {
+          transform: none;
+          z-index: 0;
+        }
     }
 
     &__header {
@@ -50,6 +59,13 @@ export default {
         transform: rotate(-70deg);
 
         transition: all .6s ease-in-out;
+
+        @media (max-width: $breakpoint-mobile-portrait) {
+          transform: rotate(0);
+          transition: none;
+          width: 100%;
+          opacity: 1;
+        }
 
         &:hover {
             opacity: 1;

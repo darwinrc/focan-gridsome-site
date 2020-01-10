@@ -127,6 +127,10 @@ export default {
   main {
     display: flex;
     width: 100%;
+
+     @media (max-width: $breakpoint-mobile-portrait) {
+      flex-direction: column-reverse;
+    }
   }
 
   section {
@@ -135,6 +139,10 @@ export default {
     width: 50%;
     height: 100vh;
     border-right: 1px solid lightgray;
+
+    @media (max-width: $breakpoint-mobile-portrait) {
+    width: 100%;
+    }
 
     &:last-child {
       position: relative;
@@ -168,6 +176,11 @@ export default {
     justify-content: center;
     align-items: center;
     margin: 1rem 0 1rem;
+
+    @media (max-width: $breakpoint-mobile-portrait) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+    }
   }
 
   .nav {
