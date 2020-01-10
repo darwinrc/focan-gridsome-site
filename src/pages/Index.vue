@@ -141,7 +141,8 @@ export default {
     border-right: 1px solid lightgray;
 
     @media (max-width: $breakpoint-mobile-portrait) {
-    width: 100%;
+      width: 100%;
+      height: 100%;
     }
 
     &:last-child {
@@ -155,16 +156,30 @@ export default {
     position: absolute;
     z-index: -1;
     opacity: .7;
+
+    @media (max-width: $breakpoint-mobile-portrait) {
+      width: 0;
+      height: 0;
+    }
   }
 
   .logo {
     width: 20rem;
     margin: 1rem auto;
 
+    @media (max-width: $breakpoint-mobile-portrait) {
+      display: none;
+    }    
+
     &__img {
-      width: 200px;
       border-radius: 63%;
-      height: 200px;
+      height: 20rem;
+      width: 20rem;
+
+      @media (max-width: $breakpoint-mobile-portrait) {
+        width: 10rem;
+        height: 10rem;
+      }
     }
   }
 
@@ -189,6 +204,10 @@ export default {
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: $breakpoint-mobile-portrait) {
+      display: none;
+    }
+
     &__link {
       font-size: 13rem;
       font-weight: 600;
@@ -210,6 +229,9 @@ export default {
   }
 
   .navTabs {
+    @media (max-width: $breakpoint-mobile-portrait) {
+      display: none;
+    }  
     &__container {
       overflow: hidden;
       position: absolute;
