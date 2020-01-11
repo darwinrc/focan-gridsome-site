@@ -27,22 +27,22 @@
             to="/stories/"
           >HISTORIAS</g-link>
         </div>
-        <nav class="navTabs">
-          <div class="navTabs__container">
-            <div class="navTabs__tab">
-              <span class="navTabs__icon"></span>
-              <div class="navTabs__text">
-                <span class="navTabs__text--white">DONAC</span>
-                <span class="navTabs__text--red">IONES</span>
+        <nav class="navPills">
+          <div class="navPills__container">
+            <div class="navPills__tab">
+              <span class="navPills__icon"></span>
+              <div class="navPills__text">
+                <span class="navPills__text--white">DONAC</span>
+                <span class="navPills__text--red">IONES</span>
               </div>
             </div>
           </div>
-          <div class="navTabs__container">
-            <div class="navTabs__tab">
-              <span class="navTabs__icon"></span>
-              <div class="navTabs__text">
-                <span class="navTabs__text--white">URGE</span>
-                <span class="navTabs__text--red">NCIAS</span>
+          <div class="navPills__container">
+            <div class="navPills__tab">
+              <span class="navPills__icon"></span>
+              <div class="navPills__text">
+                <span class="navPills__text--white">URGE</span>
+                <span class="navPills__text--red">NCIAS</span>
               </div>
             </div>
           </div>
@@ -82,32 +82,20 @@ export default {
 }
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+      "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
 }
-
-a {
-  text-decoration: none;
-  color: #00b8d4;
-
-  &:hover {
-    color: #b2ebf2;
-  }
-
-  &:active {
-    color: #b2ebf2;
-  }
-}
-
 .logo-responsive {
   width: 100px;
   height: auto;
 }
-.navTabs {
+
+.navPills {
   margin-top: 2rem;
-  width: 21rem;
+  width: 16rem;
+  margin-right: 2rem;
 
   &__tab {
     position: relative;
