@@ -112,6 +112,8 @@ body {
     display: flex;
     border-width: 1px;
     border-radius: 0.25rem;
+    background: none;
+    border-style: groove;
   }
 
   &__svg {

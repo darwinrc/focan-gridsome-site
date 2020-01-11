@@ -27,9 +27,6 @@ module.exports = {
     {
       use: 'gridsome-plugin-modal'
     },
-    {
-      use: 'gridsome-plugin-tailwindcss'
-    }
   ],
   chainWebpack (config) {
     // Load variables for all vue-files
