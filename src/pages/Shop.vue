@@ -2,7 +2,7 @@
   <Layout>
     <h1>TIENDA SOLIDARIA</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
- <section class="Shop__gallery">
+ <section class="shop__gallery">
     <ShopCard v-for="item in items" 
               :description="item.description" 
               :image="item.image" 
@@ -90,7 +90,7 @@ export default {
     font-size: 2rem;
   }
 
-  .Shop{
+  .shop{
     &__gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

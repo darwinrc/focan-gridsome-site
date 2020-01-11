@@ -1,7 +1,7 @@
 <template>
-<div class="StoryCard" @click="showStory">
-    <div class="StoryCard__header">{{name}}</div>
-    <g-image class="StoryCard__img" :alt="name" 
+<div class="story-card" @click="showStory">
+    <div class="story-card__header">{{name}}</div>
+    <g-image class="story-card__img" :alt="name" 
             :src="require('!!assets-loader!~/assets/' + image)"/>
 </div>
 </template>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.StoryCard {
+.story-card {
     cursor: pointer;
     position: relative;
 

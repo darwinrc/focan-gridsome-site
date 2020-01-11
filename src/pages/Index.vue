@@ -27,17 +27,17 @@
             <g-link class="nav__link" to="/stories/">HISTORIA</g-link>
           </nav>
         </header>
-        <nav class="navTabs">
-          <div class="navTabs__container">
-            <div class="navTabs__tab">
-              <span class="navTabs__icon">$</span>
-              <span class="navTabs__text">DONACIONES</span>
+        <nav class="nav-tabs">
+          <div class="nav-tabs__container">
+            <div class="nav-tabs__tab">
+              <span class="nav-tabs__icon">$</span>
+              <span class="nav-tabs__text">DONACIONES</span>
             </div>
           </div>
-          <div class="navTabs__container">
-            <div class="navTabs__tab">
-              <span class="navTabs__icon">+</span>
-              <span class="navTabs__text">URGENCIAS</span>
+          <div class="nav-tabs__container">
+            <div class="nav-tabs__tab">
+              <span class="nav-tabs__icon">+</span>
+              <span class="nav-tabs__text">URGENCIAS</span>
             </div>
           </div>
         </nav>
@@ -228,7 +228,7 @@ export default {
     }
   }
 
-  .navTabs {
+  .nav-tabs {
     @media (max-width: $breakpoint-mobile-portrait) {
       display: none;
     }  

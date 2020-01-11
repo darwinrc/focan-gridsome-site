@@ -1,9 +1,9 @@
 <template>
-<figure class="ShopCard">
-    <g-image class="ShopCard__img" 
+<figure class="shop-card">
+    <g-image class="shop-card__img" 
             :alt="description" 
             :src="require('!!assets-loader!~/assets/shop/' + image)"/>
-    <figcaption class="ShopCard__footer">
+    <figcaption class="shop-card__footer">
         <p>{{description}}</p> 
     </figcaption>
 </figure>
@@ -25,7 +25,7 @@ p {
   padding: 0 1.5rem;
 }
 
-.ShopCard {
+.shop-card {
   margin: 0;
   transition: all .6s ease-in-out;
 

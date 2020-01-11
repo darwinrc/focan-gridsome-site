@@ -21,22 +21,22 @@
           <g-link class="menu-list__link" to="/shop/">TIENDA</g-link>
           <g-link class="menu-list__link" to="/stories/">HISTORIAS</g-link>
         </div>
-        <nav class="navPills">
-          <div class="navPills__container">
-            <div class="navPills__tab">
-              <span class="navPills__icon"></span>
-              <div class="navPills__text">
-                <span class="navPills__text--white">DONAC</span>
-                <span class="navPills__text--red">IONES</span>
+        <nav class="nav-pills">
+          <div class="nav-pills__container">
+            <div class="nav-pills__tab">
+              <span class="nav-pills__icon"></span>
+              <div class="nav-pills__text">
+                <span class="nav-pills__text--white">DONAC</span>
+                <span class="nav-pills__text--red">IONES</span>
               </div>
             </div>
           </div>
-          <div class="navPills__container">
-            <div class="navPills__tab">
-              <span class="navPills__icon"></span>
-              <div class="navPills__text">
-                <span class="navPills__text--white">URGE</span>
-                <span class="navPills__text--red">NCIAS</span>
+          <div class="nav-pills__container">
+            <div class="nav-pills__tab">
+              <span class="nav-pills__icon"></span>
+              <div class="nav-pills__text">
+                <span class="nav-pills__text--white">URGE</span>
+                <span class="nav-pills__text--red">NCIAS</span>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ body {
   }
 }
 
-.navPills {
+.nav-pills {
   margin-top: 2rem;
   width: 16rem;
   margin-right: 2rem;
