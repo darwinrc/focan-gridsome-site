@@ -1,31 +1,25 @@
 <template>
   <div class="layout">
-    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 md:hidden">
-      <div class="flex items-center flex-shrink-0 text-white mr-5">
+    <nav class="nav">
+      <div class="nav-logo">
         <img class="logo-responsive" alt="FOCAN Logo" src="../assets/logo-home.png" />
       </div>
-      <div class="block lg:hidden">
+      <div class="menu-icon">
         <button
-          class="flex items-center px-3 py-2 border rounded"
+          class="menu-icon__button"
           @click="toggleMenu"
         >
-          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <svg class="menu-icon__svg" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
       </div>
-      <div v-if="isMenuVisible" class="flex w-full justify-between">
-        <div class="text-sm">
-          <g-link
-            class="block mt-4 text-teal-200 hover:text-white mr-4 text-4xl"
-            to="/news/"
-          >NOTICIAS</g-link>
-          <g-link class="block mt-4 text-teal-200 hover:text-white mr-4 text-4xl" to="/shop/">TIENDA</g-link>
-          <g-link
-            class="block mt-4 text-teal-200 hover:text-white text-4xl"
-            to="/stories/"
-          >HISTORIAS</g-link>
+      <div v-if="isMenuVisible" class="menu-list">
+        <div class="menu-list__link-wrap">
+          <g-link class=" menu-list__link" to="/news/">NOTICIAS</g-link>
+          <g-link class="menu-list__link" to="/shop/">TIENDA</g-link>
+          <g-link class="menu-list__link" to="/stories/">HISTORIAS</g-link>
         </div>
         <nav class="navPills">
           <div class="navPills__container">
@@ -90,6 +84,57 @@ body {
 .logo-responsive {
   width: 100px;
   height: auto;
+}
+
+.nav {
+  display: none;
+  
+  @media (max-width: $breakpoint-mobile-portrait) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem; 
+  }
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  display: block;
+
+  &__button {
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+    display: flex;
+    border-width: 1px;
+    border-radius: 0.25rem;
+  }
+
+  &__svg {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__link-wrap {
+    font-size: 0.875rem;
+  }
+
+  &__link {
+    display: block;
+    font-size: 2.25rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
 }
 
 .navPills {
