@@ -22,15 +22,24 @@ export default {
 p {
   font-size: 2rem;
   margin: 0;
+  margin-top: -0.4rem;
   padding: 0 1.5rem;
 }
 
 .shop-card {
-  margin: 0;
+  margin: 1rem 0;
   transition: all .6s ease-in-out;
+
+  @media (max-width: $breakpoint-mobile-portrait) {
+      font-size: 1rem;
+      transition: none;
+  }
 
   &:hover {
       transform: scale(1.5);
+      @media (max-width: $breakpoint-mobile-portrait) {
+        transform: none;
+      }
   }
 
   &__img {

@@ -3,10 +3,10 @@
     <h1>TIENDA SOLIDARIA</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
  <section class="shop__gallery">
-    <ShopCard v-for="item in items" 
-              :description="item.description" 
-              :image="item.image" 
-              :key="item.image"/>
+      <ShopCard v-for="item in items" 
+                :description="item.description" 
+                :image="item.image" 
+                :key="item.image"/>
  </section>
   </Layout>
 </template>
@@ -84,17 +84,29 @@ export default {
     font-weight: 600;
     text-align: center;
     color: #00B8D4;
+
+    @media (max-width: $breakpoint-mobile-portrait) {
+      font-size: 3rem;
+      margin: 1rem;
+    }
   }
 
   p {
     font-size: 2rem;
+    
+    @media (max-width: $breakpoint-mobile-portrait) {
+      font-size: 1rem;
+      margin: 1rem;
+    }
   }
 
   .shop{
     &__gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 2rem;
+      columns: 3 20rem;
+      column-gap: 2rem;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
   }
 </style>
